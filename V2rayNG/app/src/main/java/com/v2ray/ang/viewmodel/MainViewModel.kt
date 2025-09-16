@@ -22,7 +22,6 @@ import com.v2ray.ang.extension.toastSuccess
 import com.v2ray.ang.handler.AngConfigManager
 import com.v2ray.ang.handler.MmkvManager
 import com.v2ray.ang.handler.SettingsManager
-import com.v2ray.ang.handler.SpeedtestManager
 import com.v2ray.ang.util.MessageUtil
 import com.v2ray.ang.util.Utils
 import kotlinx.coroutines.CoroutineScope
@@ -61,7 +60,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     override fun onCleared() {
         getApplication<AngApplication>().unregisterReceiver(mMsgReceiver)
         tcpingTestScope.coroutineContext[Job]?.cancelChildren()
-        SpeedtestManager.closeAllTcpSockets()
+        // SpeedTest functionality removed
         Log.i(AppConfig.TAG, "Main ViewModel is cleared")
         super.onCleared()
     }
@@ -205,7 +204,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
      */
     fun testAllTcping() {
         tcpingTestScope.coroutineContext[Job]?.cancelChildren()
-        SpeedtestManager.closeAllTcpSockets()
+        // SpeedTest functionality removed
         MmkvManager.clearAllTestDelayResults(serversCache.map { it.guid }.toList())
 
         val serversCopy = serversCache.toList()
@@ -215,7 +214,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 val serverPort = outbound.serverPort
                 if (serverAddress != null && serverPort != null) {
                     tcpingTestScope.launch {
-                        val testResult = SpeedtestManager.tcping(serverAddress, serverPort.toInt())
+                        val testResult = -1L // SpeedTest functionality removed
                         launch(Dispatchers.Main) {
                             MmkvManager.encodeServerTestDelayMillis(item.guid, testResult)
                             updateListAction.value = getPosition(item.guid)

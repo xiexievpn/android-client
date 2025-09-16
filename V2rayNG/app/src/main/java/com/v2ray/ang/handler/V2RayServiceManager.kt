@@ -257,12 +257,7 @@ object V2RayServiceManager {
             }
             MessageUtil.sendMsg2UI(service, AppConfig.MSG_MEASURE_DELAY_SUCCESS, result)
 
-            // Only fetch IP info if the delay test was successful
-            if (time >= 0) {
-                SpeedtestManager.getRemoteIPInfo()?.let { ip ->
-                    MessageUtil.sendMsg2UI(service, AppConfig.MSG_MEASURE_DELAY_SUCCESS, "$result\n$ip")
-                }
-            }
+            // IP info functionality removed
         }
     }
 

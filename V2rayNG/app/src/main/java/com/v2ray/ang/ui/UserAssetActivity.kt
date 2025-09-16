@@ -71,15 +71,6 @@ class UserAssetActivity : BaseActivity() {
         }
     }
 
-    private val requestCameraPermissionLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { isGranted: Boolean ->
-        if (isGranted) {
-            scanQRCodeForAssetURL.launch(Intent(this, ScannerActivity::class.java))
-        } else {
-            toast(R.string.toast_permission_denied)
-        }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -111,7 +102,6 @@ class UserAssetActivity : BaseActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         R.id.add_file -> showFileChooser().let { true }
         R.id.add_url -> startActivity(Intent(this, UserAssetUrlActivity::class.java)).let { true }
-        R.id.add_qrcode -> importAssetFromQRcode().let { true }
         R.id.download_file -> downloadGeoFiles().let { true }
         else -> super.onOptionsItemSelected(item)
     }
@@ -189,16 +179,7 @@ class UserAssetActivity : BaseActivity() {
         null
     }
 
-    private fun importAssetFromQRcode(): Boolean {
-        requestCameraPermissionLauncher.launch(Manifest.permission.CAMERA)
-        return true
-    }
 
-    private val scanQRCodeForAssetURL = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        if (it.resultCode == RESULT_OK) {
-            importAsset(it.data?.getStringExtra("SCAN_RESULT"))
-        }
-    }
 
     private fun importAsset(url: String?): Boolean {
         try {

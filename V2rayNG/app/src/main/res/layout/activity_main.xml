@@ -1,128 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize" />
-
-        </com.google.android.material.appbar.AppBarLayout>
-
-        <RelativeLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/main_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:id="@+id/main_content"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/pb_waiting"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:visibility="invisible"
+                    app:indicatorColor="@color/color_fab_active" />
 
-                    <com.google.android.material.progressindicator.LinearProgressIndicator
-                        android:id="@+id/pb_waiting"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:indeterminate="true"
-                        android:visibility="invisible"
-                        app:indicatorColor="@color/color_fab_active" />
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_spacing_dp8"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabMode="scrollable"
+                    app:tabTextAppearance="@style/TabLayoutTextStyle" />
 
-                    <com.google.android.material.tabs.TabLayout
-                        android:id="@+id/tab_group"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_spacing_dp8"
-                        app:tabIndicatorFullWidth="false"
-                        app:tabMode="scrollable"
-                        app:tabTextAppearance="@style/TabLayoutTextStyle" />
+                <!-- 国家选择器 RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/country_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:nextFocusRight="@+id/fab"
+                    android:scrollbars="vertical" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:nextFocusRight="@+id/fab"
-                        android:scrollbars="vertical" />
+                <!-- 原服务器列表 RecyclerView (隐藏) -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:nextFocusRight="@+id/fab"
+                    android:scrollbars="vertical"
+                    android:visibility="gone" />
 
-                    <LinearLayout
-                        android:id="@+id/layout_test"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/view_height_dp64"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:nextFocusLeft="@+id/recycler_view"
-                        android:nextFocusRight="@+id/fab"
-                        android:orientation="vertical">
+            </LinearLayout>
 
-                        <View
-                            android:layout_width="wrap_content"
-                            android:layout_height="1dp"
-                            android:background="@color/divider_color_light" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="@dimen/padding_spacing_dp16">
 
-                        <TextView
-                            android:id="@+id/tv_test_state"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="start|center"
-                            android:maxLines="2"
-                            android:minLines="1"
-                            android:paddingStart="@dimen/padding_spacing_dp16"
-                            android:text="@string/connection_test_pending"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <FrameLayout
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|end"
-                    android:layout_marginEnd="@dimen/padding_spacing_dp16">
+                    android:layout_marginBottom="@dimen/view_height_dp36"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:nextFocusLeft="@+id/layout_test"
+                    android:src="@drawable/ic_play_24dp"
+                    app:layout_anchorGravity="bottom|right|end" />
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/fab"
+            </FrameLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <!-- 换区进度指示器（默认隐藏） -->
+        <FrameLayout
+            android:id="@+id/progress_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/progress_background"
+                android:padding="32dp">
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circular_progress"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        app:indicatorColor="#00FF00"
+                        app:trackColor="#333333"
+                        app:trackThickness="6dp"
+                        app:indicatorSize="80dp"
+                        app:indicatorInset="0dp" />
+
+                    <TextView
+                        android:id="@+id/progress_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|end"
-                        android:layout_marginBottom="@dimen/view_height_dp36"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:nextFocusLeft="@+id/layout_test"
-                        android:src="@drawable/ic_play_24dp"
-                        app:layout_anchorGravity="bottom|right|end" />
+                        android:layout_gravity="center"
+                        android:text="0%"
+                        android:textColor="#00FF00"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                 </FrameLayout>
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
-        </RelativeLayout>
-    </LinearLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
-        app:itemIconTint="@color/colorAccent"
-        app:menu="@menu/menu_drawer">
+                <TextView
+                    android:id="@+id/progress_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在切换区域..."
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center" />
 
-    </com.google.android.material.navigation.NavigationView>
+            </LinearLayout>
 
-</androidx.drawerlayout.widget.DrawerLayout>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
 

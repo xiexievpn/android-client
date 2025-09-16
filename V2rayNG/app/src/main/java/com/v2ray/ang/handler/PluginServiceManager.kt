@@ -77,10 +77,9 @@ object PluginServiceManager {
             val proc = ProcessService()
             proc.runProcess(context, cmd)
             Thread.sleep(1000L)
-            val delay = SpeedtestManager.testConnection(context, socksPort)
             proc.stopProcess()
 
-            return delay.first
+            return retFailure
         }
         return retFailure
     }

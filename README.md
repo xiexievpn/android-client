@@ -1,32 +1,222 @@
-# v2rayNG
+# Android VPN Client
 
-A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-core) and [v2fly core](https://github.com/v2fly/v2ray-core)
+A streamlined Android VPN client based on V2rayNG, customized for VLESS + Reality protocol integration with our VPN service system.
 
-[![API](https://img.shields.io/badge/API-21%2B-yellow.svg?style=flat)](https://developer.android.com/about/versions/lollipop)
-[![Kotlin Version](https://img.shields.io/badge/Kotlin-2.2.0-blue.svg)](https://kotlinlang.org)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/2dust/v2rayNG)](https://github.com/2dust/v2rayNG/commits/master)
-[![CodeFactor](https://www.codefactor.io/repository/github/2dust/v2rayng/badge)](https://www.codefactor.io/repository/github/2dust/v2rayng)
-[![GitHub Releases](https://img.shields.io/github/downloads/2dust/v2rayNG/latest/total?logo=github)](https://github.com/2dust/v2rayNG/releases)
-[![Chat on Telegram](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://t.me/v2rayn)
+## Overview
 
-### Telegram Channel
-[github_2dust](https://t.me/github_2dust)
+This is a minimized and customized version of the official V2rayNG client, designed specifically for our VPN service. It removes unnecessary features and focuses on seamless integration with our backend VLESS + Reality protocol configuration.
 
-### Usage
+## Features
 
-#### Geoip and Geosite
-- geoip.dat and geosite.dat files are in `Android/data/com.v2ray.ang/files/assets` (path may differ on some Android device)
-- download feature will get enhanced version in this [repo](https://github.com/Loyalsoldier/v2ray-rules-dat) (Note it need a working proxy)
-- latest official [domain list](https://github.com/Loyalsoldier/v2ray-rules-dat) and [ip list](https://github.com/Loyalsoldier/geoip) can be imported manually
-- possible to use third party dat file in the same folder, like [h2y](https://guide.v2fly.org/routing/sitedata.html#%E5%A4%96%E7%BD%AE%E7%9A%84%E5%9F%9F%E5%90%8D%E6%96%87%E4%BB%B6)
+- **VLESS + Reality Protocol Support**: Optimized for VLESS protocol with Reality camouflage technology
+- **Backend Integration**: Direct configuration import from our VPN service backend
+- **Multi-Architecture Support**: arm64-v8a, armeabi-v7a, x86_64, x86
+- **Streamlined UI**: Simplified interface focused on essential VPN functionality
+- **Automatic Configuration**: One-click configuration import via backend API
 
-### More in our [wiki](https://github.com/2dust/v2rayNG/wiki)
+## System Requirements
 
-### Development guide
+- **Minimum SDK**: Android 5.0 (API Level 21)
+- **Target SDK**: Android 14 (API Level 34)
+- **Architecture**: arm64-v8a, armeabi-v7a, x86_64, x86
+- **Permissions**: Network access, VPN service permissions
 
-Android project under V2rayNG folder can be compiled directly in Android Studio, or using Gradle wrapper. But the v2ray core inside the aar is (probably) outdated.  
-The aar can be compiled from the Golang project [AndroidLibV2rayLite](https://github.com/2dust/AndroidLibV2rayLite) or [AndroidLibXrayLite](https://github.com/2dust/AndroidLibXrayLite).
-For a quick start, read guide for [Go Mobile](https://github.com/golang/go/wiki/Mobile) and [Makefiles for Go Developers](https://tutorialedge.net/golang/makefiles-for-go-developers/)
+## Development Environment Setup
 
-v2rayNG can run on Android Emulators. For WSA, VPN permission need to be granted via
-`appops set [package name] ACTIVATE_VPN allow`
+### Prerequisites
+
+1. **Android Studio** (latest version recommended)
+2. **Android SDK** with API Level 21-34
+3. **Java Development Kit (JDK)** 17 or higher
+4. **Gradle** 8.0+
+5. **Android NDK** (for native library compilation)
+
+### SDK Configuration
+
+Ensure you have the following SDK components installed:
+```bash
+# Install required SDK platforms and tools
+sdkmanager "platforms;android-21"
+sdkmanager "platforms;android-34"
+sdkmanager "build-tools;34.0.0"
+sdkmanager "ndk;25.1.8937393"
+```
+
+## Building the Project
+
+### 1. Clone and Setup
+
+```bash
+# Navigate to the project directory
+cd android/
+
+# Ensure gradlew has execute permissions (Linux/macOS)
+chmod +x gradlew
+```
+
+### 2. Build Debug APK
+
+```bash
+# Windows
+gradlew.bat assembleDebug
+
+# Linux/macOS
+./gradlew assembleDebug
+```
+
+The debug APK will be generated at:
+`V2rayNG/app/build/outputs/apk/debug/app-debug.apk`
+
+### 3. Build Release APK
+
+```bash
+# Windows
+gradlew.bat assembleRelease
+
+# Linux/macOS
+./gradlew assembleRelease
+```
+
+**Note**: Release builds require signing configuration in `app/build.gradle.kts`
+
+### 4. Clean Build
+
+```bash
+# Windows
+gradlew.bat clean
+
+# Linux/macOS
+./gradlew clean
+```
+
+## Testing Instructions
+
+### 1. Unit Testing
+
+```bash
+# Run unit tests
+./gradlew test
+
+# Run tests with coverage report
+./gradlew jacocoTestReport
+```
+
+### 2. Instrumentation Testing
+
+```bash
+# Run instrumentation tests on connected device/emulator
+./gradlew connectedAndroidTest
+```
+
+### 3. Manual Testing
+
+1. **Install Debug APK**:
+   ```bash
+   adb install V2rayNG/app/build/outputs/apk/debug/app-debug.apk
+   ```
+
+2. **Test Configuration Import**:
+   - Launch the app
+   - Use the configuration import feature
+   - Verify VLESS configuration parsing
+   - Test VPN connection establishment
+
+3. **Test Backend Integration**:
+   - Verify API communication with backend
+   - Test configuration updates
+   - Validate user authentication flow
+
+### 4. Performance Testing
+
+```bash
+# Profile app performance
+./gradlew app:profileInstall
+
+# Memory leak detection
+./gradlew app:lintDebug
+```
+
+## Code Architecture
+
+### Key Components
+
+- **MainActivity.kt**: Main application entry point and UI controller
+- **AngConfigManager**: Configuration management and import logic
+- **V2rayNG Core**: Core VPN functionality and protocol handling
+- **Backend Integration**: API communication layer for configuration retrieval
+
+### Configuration Import Flow
+
+```kotlin
+// Import configuration from backend
+val vlessLink = "vless://..."
+val (count, _) = AngConfigManager.importBatchConfig(vlessLink, subscriptionId, true)
+
+// Refresh server list after successful import
+if (count > 0) {
+    mainViewModel.reloadServerList()
+}
+```
+
+## Build Variants
+
+| Variant | Description | Use Case |
+|---------|-------------|----------|
+| `debug` | Debug build with logging | Development and testing |
+| `release` | Optimized production build | Distribution |
+
+## Supported Architectures
+
+- **arm64-v8a**: 64-bit ARM devices (recommended)
+- **armeabi-v7a**: 32-bit ARM devices
+- **x86_64**: 64-bit x86 devices (emulators)
+- **x86**: 32-bit x86 devices (legacy emulators)
+
+## Troubleshooting
+
+### Common Build Issues
+
+1. **SDK Path Issues**:
+   ```bash
+   # Set ANDROID_HOME environment variable
+   export ANDROID_HOME="/path/to/android/sdk"
+   export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+   ```
+
+2. **NDK Build Failures**:
+   - Ensure NDK is properly installed via SDK Manager
+   - Check NDK version compatibility in `build.gradle.kts`
+
+3. **Gradle Sync Issues**:
+   ```bash
+   # Clean and rebuild
+   ./gradlew clean
+   ./gradlew build --refresh-dependencies
+   ```
+
+4. **Permission Errors**:
+   ```bash
+   # Grant execute permission (Linux/macOS)
+   chmod +x gradlew
+   ```
+
+### Runtime Issues
+
+1. **VPN Service Permission**: Ensure VPN permissions are granted in device settings
+2. **Network Configuration**: Verify device has internet connectivity
+3. **Backend Connectivity**: Check backend API accessibility
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Make your changes and test thoroughly
+4. Submit a pull request with detailed description
+
+## License
+
+Based on V2rayNG project. Please refer to the original project license terms.
+
+## Support
+
+For technical support and bug reports, please open an issue in this repository.

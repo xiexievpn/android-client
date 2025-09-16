@@ -11,4 +11,9 @@
 
     <color name="colorPrimary">#F5F5F5</color>
     <color name="colorAccent">#000000</color>
+
+    <!-- Login page hacker style colors -->
+    <color name="login_background">#000000</color>
+    <color name="login_text_green">#00FF00</color>
+    <color name="login_primary_green">#00CC00</color>
 </resources>

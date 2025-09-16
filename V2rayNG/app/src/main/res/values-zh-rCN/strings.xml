@@ -9,6 +9,32 @@
     <string name="migration_fail">数据迁移失败啦!</string>
     <string name="pull_down_to_refresh">请下拉刷新!</string>
 
+    <!-- Login related -->
+    <string name="login_title">登录</string>
+    <string name="login_prompt">请输入您的访问代码</string>
+    <string name="login_button">登录</string>
+    <string name="auto_login">下次自动登录</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_failed">登录失败</string>
+    <string name="invalid_code">无效的访问代码</string>
+    <string name="expired_code">访问代码已过期</string>
+    <string name="server_error">服务器错误，请稍后重试</string>
+    <string name="network_error">网络连接失败</string>
+
+    <!-- Country names -->
+    <string name="country_jp">韩国</string>
+    <string name="country_us">美国</string>
+    <string name="country_jj">日本</string>
+    <string name="country_in">印度</string>
+    <string name="country_si">新加坡</string>
+    <string name="country_au">澳大利亚</string>
+    <string name="country_ca">加拿大</string>
+    <string name="country_ge">德国</string>
+    <string name="country_ir">爱尔兰</string>
+    <string name="country_ki">英国</string>
+    <string name="country_fr">法国</string>
+    <string name="country_sw">瑞典</string>
+
     <!-- Notifications -->
     <string name="notification_action_stop_v2ray">停止</string>
     <string name="toast_permission_denied">无法取得权限</string>

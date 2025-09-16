@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.v2ray.ang.handler.SettingsManager
 import com.v2ray.ang.helper.CustomDividerItemDecoration
+import com.v2ray.ang.util.LanguageManager
 import com.v2ray.ang.util.MyContextWrapper
 import com.v2ray.ang.util.Utils
 
@@ -40,7 +41,13 @@ abstract class BaseActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(MyContextWrapper.wrap(newBase ?: return, SettingsManager.getLocale()))
+        // 使用自动语言检测
+        val contextWithLanguage = if (newBase != null) {
+            LanguageManager.autoApplyLanguage(newBase)
+        } else {
+            return
+        }
+        super.attachBaseContext(contextWithLanguage)
     }
 
     /**

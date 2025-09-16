@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">v2rayNG</string>
+    <string name="app_name" translatable="false">xiexievpn</string>
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
     <string name="app_tile_first_use">First use of this feature, please use the app to add server</string>
@@ -9,6 +9,32 @@
     <string name="migration_success">Data migration success!</string>
     <string name="migration_fail">Data migration failed!</string>
     <string name="pull_down_to_refresh">Please pull down to refresh!</string>
+
+    <!-- Login related -->
+    <string name="login_title">Login</string>
+    <string name="login_prompt">Enter your access code</string>
+    <string name="login_button">Login</string>
+    <string name="auto_login">Auto login next time</string>
+    <string name="login_success">Login successful</string>
+    <string name="login_failed">Login failed</string>
+    <string name="invalid_code">Invalid access code</string>
+    <string name="expired_code">Access code expired</string>
+    <string name="server_error">Server error, please try again later</string>
+    <string name="network_error">Network connection failed</string>
+
+    <!-- Country names -->
+    <string name="country_jp">韩国</string>
+    <string name="country_us">美国</string>
+    <string name="country_jj">日本</string>
+    <string name="country_in">印度</string>
+    <string name="country_si">新加坡</string>
+    <string name="country_au">澳大利亚</string>
+    <string name="country_ca">加拿大</string>
+    <string name="country_ge">德国</string>
+    <string name="country_ir">爱尔兰</string>
+    <string name="country_ki">英国</string>
+    <string name="country_fr">法国</string>
+    <string name="country_sw">瑞典</string>
 
     <!-- Notifications -->
     <string name="notification_action_stop_v2ray">Stop</string>
@@ -350,7 +376,6 @@
         <item>QRcode</item>
         <item>Export to clipboard</item>
         <item>Export full configuration to clipboard</item>
-        <item>Edit</item>
         <item>Delete</item>
     </string-array>
 

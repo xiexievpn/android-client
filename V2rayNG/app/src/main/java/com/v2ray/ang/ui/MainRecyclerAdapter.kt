@@ -89,8 +89,6 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
 
             //layout
             if (doubleColumnDisplay) {
-                holder.itemMainBinding.layoutShare.visibility = View.GONE
-                holder.itemMainBinding.layoutEdit.visibility = View.GONE
                 holder.itemMainBinding.layoutRemove.visibility = View.GONE
                 holder.itemMainBinding.layoutMore.visibility = View.VISIBLE
 
@@ -101,21 +99,9 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
                     shareServer(guid, profile, position, shareOptions, if (isCustom) 2 else 0)
                 }
             } else {
-                holder.itemMainBinding.layoutShare.visibility = View.VISIBLE
-                holder.itemMainBinding.layoutEdit.visibility = View.VISIBLE
                 holder.itemMainBinding.layoutRemove.visibility = View.VISIBLE
                 holder.itemMainBinding.layoutMore.visibility = View.GONE
 
-                //share method
-                val shareOptions = if (isCustom) share_method.asList().takeLast(1) else share_method.asList()
-
-                holder.itemMainBinding.layoutShare.setOnClickListener {
-                    shareServer(guid, profile, position, shareOptions, if (isCustom) 2 else 0)
-                }
-
-                holder.itemMainBinding.layoutEdit.setOnClickListener {
-                    editServer(guid, profile)
-                }
                 holder.itemMainBinding.layoutRemove.setOnClickListener {
                     removeServer(guid, position)
                 }
@@ -184,8 +170,7 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
                     0 -> showQRCode(guid)
                     1 -> share2Clipboard(guid)
                     2 -> shareFullContent(guid)
-                    3 -> editServer(guid, profile)
-                    4 -> removeServer(guid, position)
+                    3 -> removeServer(guid, position)
                     else -> mActivity.toast("else")
                 }
             } catch (e: Exception) {
@@ -233,22 +218,6 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
         }
     }
 
-    /**
-     * Edits server configuration
-     * Opens appropriate editing interface based on configuration type
-     * @param guid The server unique identifier
-     * @param profile The server configuration
-     */
-    private fun editServer(guid: String, profile: ProfileItem) {
-        val intent = Intent().putExtra("guid", guid)
-            .putExtra("isRunning", isRunning)
-            .putExtra("createConfigType", profile.configType.value)
-        if (profile.configType == EConfigType.CUSTOM) {
-            mActivity.startActivity(intent.setClass(mActivity, ServerCustomConfigActivity::class.java))
-        } else {
-            mActivity.startActivity(intent.setClass(mActivity, ServerActivity::class.java))
-        }
-    }
 
     /**
      * Removes server configuration

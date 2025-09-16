@@ -7,6 +7,7 @@ import androidx.work.WorkManager
 import com.tencent.mmkv.MMKV
 import com.v2ray.ang.AppConfig.ANG_PACKAGE
 import com.v2ray.ang.handler.SettingsManager
+import com.v2ray.ang.util.LanguageManager
 
 class AngApplication : MultiDexApplication() {
     companion object {
@@ -18,7 +19,13 @@ class AngApplication : MultiDexApplication() {
      * @param base The base context.
      */
     override fun attachBaseContext(base: Context?) {
-        super.attachBaseContext(base)
+        // 应用多语言设置
+        val contextWithLanguage = if (base != null) {
+            LanguageManager.autoApplyLanguage(base)
+        } else {
+            base
+        }
+        super.attachBaseContext(contextWithLanguage)
         application = this
     }
 
