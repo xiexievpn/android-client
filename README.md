@@ -2,18 +2,6 @@
 
 A streamlined Android VPN client based on V2rayNG, customized for VLESS + Reality protocol integration with our VPN service system.
 
-## Overview
-
-This is a minimized and customized version of the official V2rayNG client, designed specifically for our VPN service. It removes unnecessary features and focuses on seamless integration with our backend VLESS + Reality protocol configuration.
-
-## Features
-
-- **VLESS + Reality Protocol Support**: Optimized for VLESS protocol with Reality camouflage technology
-- **Backend Integration**: Direct configuration import from our VPN service backend
-- **Multi-Architecture Support**: arm64-v8a, armeabi-v7a, x86_64, x86
-- **Streamlined UI**: Simplified interface focused on essential VPN functionality
-- **Automatic Configuration**: One-click configuration import via backend API
-
 ## System Requirements
 
 - **Minimum SDK**: Android 5.0 (API Level 21)
