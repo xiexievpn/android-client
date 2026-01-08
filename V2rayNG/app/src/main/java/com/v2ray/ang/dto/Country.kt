@@ -1,0 +1,1 @@
+package com.v2ray.ang.dtodata class Country(    val code: String,              val name: String,              val flagRes: Int,              var isSelected: Boolean = false  )
