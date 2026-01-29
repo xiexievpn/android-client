@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_fab_active">#f97910</color>
+    <color name="color_fab_inactive">#646464</color>
+    <color name="color_secondary">#BDBDBD</color>
+    <color name="divider_color_light">#424242</color>
+
+    <color name="colorPrimary">#212121</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <!-- Login page colors for night mode (same as day mode, hacker style) -->
+    <color name="login_background">#000000</color>
+    <color name="login_text_green">#00FF00</color>
+    <color name="login_primary_green">#00FF88</color>
+    <color name="login_button_gradient_start">#00FF88</color>
+    <color name="login_button_gradient_end">#00D4AA</color>
+    <color name="login_button_text">#0A0E1B</color>
+
+    <!-- Country selector text color for night mode -->
+    <color name="country_text_normal">#FFFFFF</color>
+    <color name="country_text_selected">#000000</color>
+</resources>
