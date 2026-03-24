@@ -1,0 +1,65 @@
+> Task :app:preBuild UP-TO-DATE
+> Task :app:prePlaystoreReleaseBuild UP-TO-DATE
+> Task :app:mergePlaystoreReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergePlaystoreReleaseNativeLibs UP-TO-DATE
+> Task :app:stripPlaystoreReleaseDebugSymbols UP-TO-DATE
+> Task :app:extractPlaystoreReleaseNativeSymbolTables UP-TO-DATE
+> Task :app:mergePlaystoreReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:mergePlaystoreReleaseArtProfile UP-TO-DATE
+> Task :app:expandPlaystoreReleaseL8ArtProfileWildcards UP-TO-DATE
+> Task :app:checkPlaystoreReleaseDuplicateClasses UP-TO-DATE
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:dataBindingMergeDependencyArtifactsPlaystoreRelease UP-TO-DATE
+> Task :app:generatePlaystoreReleaseResValues UP-TO-DATE
+> Task :app:generatePlaystoreReleaseResources UP-TO-DATE
+> Task :app:mergePlaystoreReleaseResources UP-TO-DATE
+> Task :app:packagePlaystoreReleaseResources UP-TO-DATE
+> Task :app:parsePlaystoreReleaseLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesPlaystoreRelease UP-TO-DATE
+> Task :app:generatePlaystoreReleaseBuildConfig UP-TO-DATE
+> Task :app:checkPlaystoreReleaseAarMetadata UP-TO-DATE
+> Task :app:mapPlaystoreReleaseSourceSetPaths UP-TO-DATE
+> Task :app:createPlaystoreReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksPlaystoreRelease UP-TO-DATE
+> Task :app:processPlaystoreReleaseMainManifest UP-TO-DATE
+> Task :app:processPlaystoreReleaseManifest UP-TO-DATE
+> Task :app:processPlaystoreReleaseManifestForPackage UP-TO-DATE
+> Task :app:processPlaystoreReleaseResources UP-TO-DATE
+> Task :app:javaPreCompilePlaystoreRelease UP-TO-DATE
+> Task :app:desugarPlaystoreReleaseFileDependencies UP-TO-DATE
+> Task :app:mergePlaystoreReleaseStartupProfile UP-TO-DATE
+> Task :app:mergeExtDexPlaystoreRelease UP-TO-DATE
+> Task :app:mergePlaystoreReleaseShaders UP-TO-DATE
+> Task :app:compilePlaystoreReleaseShaders NO-SOURCE
+> Task :app:generatePlaystoreReleaseAssets UP-TO-DATE
+> Task :app:mergePlaystoreReleaseAssets UP-TO-DATE
+> Task :app:compressPlaystoreReleaseAssets UP-TO-DATE
+> Task :app:extractPlaystoreReleaseVersionControlInfo UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:optimizePlaystoreReleaseResources UP-TO-DATE
+> Task :app:collectPlaystoreReleaseDependencies UP-TO-DATE
+> Task :app:sdkPlaystoreReleaseDependencyData UP-TO-DATE
+> Task :app:validateSigningPlaystoreRelease UP-TO-DATE
+> Task :app:writePlaystoreReleaseAppMetadata UP-TO-DATE
+> Task :app:writePlaystoreReleaseSigningConfigVersions UP-TO-DATE
+> Task :app:compilePlaystoreReleaseKotlin
+> Task :app:compilePlaystoreReleaseJavaWithJavac UP-TO-DATE
+> Task :app:dexBuilderPlaystoreRelease
+> Task :app:mergePlaystoreReleaseGlobalSynthetics UP-TO-DATE
+> Task :app:generatePlaystoreReleaseLintVitalReportModel
+> Task :app:processPlaystoreReleaseJavaRes UP-TO-DATE
+> Task :app:mergePlaystoreReleaseJavaResource UP-TO-DATE
+> Task :app:mergeDexPlaystoreRelease
+> Task :app:l8DexDesugarLibPlaystoreRelease
+> Task :app:compilePlaystoreReleaseArtProfile
+> Task :app:lintVitalAnalyzePlaystoreRelease
+> Task :app:lintVitalReportPlaystoreRelease UP-TO-DATE
+> Task :app:lintVitalPlaystoreRelease
+> Task :app:packagePlaystoreRelease
+> Task :app:createPlaystoreReleaseApkListingFileRedirect UP-TO-DATE
+> Task :app:assemblePlaystoreRelease
+
+BUILD SUCCESSFUL in 30s
+54 actionable tasks: 9 executed, 45 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.0.0/userguide/configuration_cache_enabling.html
