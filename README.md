@@ -7,6 +7,7 @@ Build steps on Linux (Ubuntu/Debian):
 1. Install JDK 21 and Android SDK, set environment variables:
 
 export ANDROID_HOME=~/android-sdk
+
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 
 2. In the source code directory, run:
