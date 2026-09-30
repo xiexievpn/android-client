@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="@color/login_background">
+
+    <!-- App Logo or Title -->
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="32dp"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:contentDescription="App Logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="@string/app_name"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/login_text_green" />
+
+    <!-- Login Title (removed) -->
+
+    <!-- UUID Input Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="@string/login_prompt"
+        android:theme="@style/LoginInputOverlay"
+        app:boxStrokeColor="@color/login_primary_green"
+        app:hintTextColor="@color/login_primary_green">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUuid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:textColor="@color/login_text_green" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Auto Login Checkbox -->
+    <CheckBox
+        android:id="@+id/cbAutoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/auto_login"
+        android:textSize="14sp"
+        android:textColor="@color/login_text_green"
+        android:theme="@style/LoginInputOverlay"
+        android:buttonTint="@color/login_primary_green" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/login_button"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/login_button_background"
+        android:textColor="@color/login_button_text"
+        style="@style/LoginButtonStyle" />
+
+    <!-- Register Link -->
+    <TextView
+        android:id="@+id/tvRegisterLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/no_code_register"
+        android:textSize="14sp"
+        android:textColor="@color/login_text_green"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <!-- Progress Bar (initially hidden) -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:indeterminateTint="@color/login_primary_green"
+        android:visibility="gone" />
+
+</LinearLayout>

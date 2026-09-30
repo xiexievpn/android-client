@@ -1,0 +1,1 @@
+package com.v2ray.ang.serviceinterface Tun2SocksControl {    fun startTun2Socks()    fun stopTun2Socks()}
