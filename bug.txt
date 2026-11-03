@@ -1,0 +1,176 @@
+09-07 19:39:25.226 I/GoLog   ( 9718): from 127.0.0.1:57914 accepted //speed.cloudflare.com:443 [socks >> proxy]
+09-07 19:39:22.452 I/GoLog   ( 9718): from 127.0.0.1:57912 accepted //speed.cloudflare.com:443 [socks >> proxy]
+09-07 19:39:21.534 I/GoLog   ( 9718): from 127.0.0.1:57904 accepted //speed.cloudflare.com:443 [socks >> proxy]
+09-07 19:39:18.861 I/GoLog   ( 9718): from 127.0.0.1:57888 accepted //speed.cloudflare.com:443 [socks >> proxy]
+09-07 19:39:17.030 I/GoLog   ( 9718): from 127.0.0.1:57872 accepted //speed.cloudflare.com:443 [socks >> proxy]
+09-07 19:39:14.781 I/GoLog   ( 9718): from 127.0.0.1:47444 accepted //speed.cloudflare.com:443 [socks >> proxy]
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	... 15 more
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at java.lang.ProcessImpl.start(ProcessImpl.java:141)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at java.lang.UNIXProcess.<init>(UNIXProcess.java:133)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at java.lang.UNIXProcess.forkAndExec(Native Method)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): Caused by: java.io.IOException: error=2, No such file or directory
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:911)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:591)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at java.lang.reflect.Method.invoke(Native Method)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at android.app.ActivityThread.main(ActivityThread.java:8934)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at android.os.Looper.loop(Looper.java:317)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at android.os.Looper.loopOnce(Looper.java:232)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at android.os.Handler.dispatchMessage(Handler.java:109)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2597)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at android.app.ActivityThread.-$$Nest$mhandleServiceArgs(Unknown Source:0)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:5305)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at com.v2ray.ang.service.V2RayVpnService.onStartCommand(V2RayVpnService.kt:94)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at com.v2ray.ang.service.V2RayVpnService.startService(V2RayVpnService.kt:105)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at com.v2ray.ang.service.V2RayVpnService.setupService(V2RayVpnService.kt:138)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at com.v2ray.ang.service.V2RayVpnService.runTun2socks(V2RayVpnService.kt:314)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at com.v2ray.ang.service.Tun2SocksService.startTun2Socks(Tun2SocksService.kt:69)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): 	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1050)
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): java.io.IOException: Cannot run program "/data/app/~~t11lSAEpbG0TQp-mITMJvA==/com.v2ray.ang.fdroid-RTcrhcpHwB1KJdySAxlD4A==/lib/arm64/libtun2socks.so" (in directory "/data/user/0/com.v2ray.ang.fdroid/files"): error=2, No such file or directory
+09-07 19:39:12.096 E/com.v2ray.ang.fdroid( 9718): Failed to start libtun2socks.so process
+09-07 19:39:12.091 I/com.v2ray.ang.fdroid( 9718): [/data/app/~~t11lSAEpbG0TQp-mITMJvA==/com.v2ray.ang.fdroid-RTcrhcpHwB1KJdySAxlD4A==/lib/arm64/libtun2socks.so, --netif-ipaddr, 10.10.14.2, --netif-netmask, 255.255.255.252, --socks-server-addr, 127.0.0.1:10808, --tunmtu, 1500, --sock-path, sock_path, --enable-udprelay, --loglevel, notice]
+09-07 19:39:12.090 I/com.v2ray.ang.fdroid( 9718): Start run libtun2socks.so
+09-07 19:39:12.071 I/com.v2ray.ang.fdroid( 9718): Starting plugin execution
+09-07 19:39:12.061 I/GoLog   ( 9718): [Warning] core: Xray 25.9.5 started
+09-07 19:39:12.060 I/GoLog   ( 9718): Starting core successfully
+09-07 19:39:12.059 I/GoLog   ( 9718): starting core...
+09-07 19:39:11.257 I/GoLog   ( 9718): initializing core...
+09-07 19:39:11.237 I/com.v2ray.ang.fdroid( 9718): Resolved IPs for ustt1a.rocketchats.xyz: 50.112.194.167
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.ui.MainActivity$importBatchConfig$1.invokeSuspend(MainActivity.kt:473)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.handler.AngConfigManager.importBatchConfig(AngConfigManager.kt:177)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.decode(Utils.kt:108)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.tryDecodeBase64(Utils.kt:126)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:121)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:139)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:164)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): java.lang.IllegalArgumentException: bad base-64
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): Failed to decode URL-safe base64
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.ui.MainActivity$importBatchConfig$1.invokeSuspend(MainActivity.kt:473)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.handler.AngConfigManager.importBatchConfig(AngConfigManager.kt:177)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.decode(Utils.kt:108)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.tryDecodeBase64(Utils.kt:121)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:121)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:139)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:164)
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): java.lang.IllegalArgumentException: bad base-64
+09-07 19:39:07.501 E/com.v2ray.ang.fdroid( 9648): Failed to decode standard base64
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.ui.MainActivity$importBatchConfig$1.invokeSuspend(MainActivity.kt:473)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.handler.AngConfigManager.importBatchConfig(AngConfigManager.kt:177)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.decode(Utils.kt:108)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.tryDecodeBase64(Utils.kt:126)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:121)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:139)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:164)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): java.lang.IllegalArgumentException: bad base-64
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): Failed to decode URL-safe base64
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.ui.MainActivity$importBatchConfig$1.invokeSuspend(MainActivity.kt:473)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.handler.AngConfigManager.importBatchConfig(AngConfigManager.kt:177)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.decode(Utils.kt:108)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.tryDecodeBase64(Utils.kt:121)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:121)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:139)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:164)
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): java.lang.IllegalArgumentException: bad base-64
+09-07 19:39:07.500 E/com.v2ray.ang.fdroid( 9648): Failed to decode standard base64
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.ui.MainActivity$importBatchConfig$1.invokeSuspend(MainActivity.kt:473)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.handler.AngConfigManager.importBatchConfig(AngConfigManager.kt:167)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.decode(Utils.kt:108)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.tryDecodeBase64(Utils.kt:126)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:121)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:139)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:164)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): java.lang.IllegalArgumentException: bad base-64
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): Failed to decode URL-safe base64
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.ui.MainActivity$importBatchConfig$1.invokeSuspend(MainActivity.kt:473)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.handler.AngConfigManager.importBatchConfig(AngConfigManager.kt:167)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.decode(Utils.kt:108)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.tryDecodeBase64(Utils.kt:121)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:121)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:139)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:164)
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): java.lang.IllegalArgumentException: bad base-64
+09-07 19:39:07.490 E/com.v2ray.ang.fdroid( 9648): Failed to decode standard base64
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.ui.MainActivity$importBatchConfig$1.invokeSuspend(MainActivity.kt:473)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.handler.AngConfigManager.importBatchConfig(AngConfigManager.kt:167)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.decode(Utils.kt:108)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.tryDecodeBase64(Utils.kt:126)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:121)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:139)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:164)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): java.lang.IllegalArgumentException: bad base-64
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): Failed to decode URL-safe base64
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.ui.MainActivity$importBatchConfig$1.invokeSuspend(MainActivity.kt:473)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.handler.AngConfigManager.importBatchConfig(AngConfigManager.kt:167)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.decode(Utils.kt:108)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at com.v2ray.ang.util.Utils.tryDecodeBase64(Utils.kt:121)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:121)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:139)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): 	at android.util.Base64.decode(Base64.java:164)
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): java.lang.IllegalArgumentException: bad base-64
+09-07 19:39:07.489 E/com.v2ray.ang.fdroid( 9648): Failed to decode standard base64
+09-07 19:39:02.471 I/com.v2ray.ang.fdroid( 9648): Copied from apk assets folder to /storage/emulated/0/Android/data/com.v2ray.ang.fdroid/files/assets/geosite.dat
+09-07 19:39:02.416 I/com.v2ray.ang.fdroid( 9648): Copied from apk assets folder to /storage/emulated/0/Android/data/com.v2ray.ang.fdroid/files/assets/geoip.dat
